@@ -28,3 +28,26 @@ body = body.to_s
 to have the output as a string in your program. 
 
 ## Features
+### GET /time
+Returns current time of the server. Shows result in this format :
+```
+HH : MM : SS , Zone = TIMEZONE
+```
+### GET /time/:zone
+You need to give it a parameter, for example :
+```
+GET /time/+0330
+``` 
+Then it returns difference between given zone and UTC. 
+### GET /date
+Returns current gregorian day of the server in this format :
+```
+MM / DD / YYYY
+```
+P.S : American format is more popular than other formats, and this is why I used it. 
+### GET /date/jalali
+Returns current Jalali date of the server in this format :
+```
+DD / MM / YYY
+```
+This is regular format we use in Iran, Afghanistan, Tajikistan and other regions of the world which people use Jalali calendar. 
