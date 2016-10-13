@@ -17,3 +17,9 @@ puts body2.to_s
 request3 = HTTP.get("http://localhost:4567/time")
 body3 = request3.body
 puts body3.to_s
+
+request4 = HTTP.get("http://localhost:4567/time/+0330")
+#Returns difference between IRDT and UTC
+
+body4 = request4.body
+puts body4.to_s
