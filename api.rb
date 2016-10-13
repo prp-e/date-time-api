@@ -1,8 +1,13 @@
 require 'sinatra'
 require 'parsi-date'
+require 'time'
 
 get '/time' do 
  "#{Time.now().hour()} : #{Time.now().min()} : #{Time.now().sec()} , Zone : #{Time.now().zone()}" 
+end
+
+get '/time/:zone' do
+ "#{Time.zone_offset(params[:zone], Time.now().year())}"
 end
 
 get '/date' do
