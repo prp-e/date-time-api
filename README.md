@@ -8,7 +8,7 @@ It's simple, just run `api.rb` like this :
 ```bash
 ~$ ruby api.rb -p 4567
 ```
-note that 4567 is default port of sinatra, but you can change it. Now, you can run `test.rb` and `test2.rb` to see how the API works.
+note that 4567 is default port of sinatra, but you can change it. Now, you can run `test.rb`, `test2.rb` and `test3.rb` to see how the API works.
 
 ## How to write a test? 
 
@@ -51,3 +51,14 @@ Returns current Jalali date of the server in this format :
 DD / MM / YYY
 ```
 This is regular format we use in Iran, Afghanistan, Tajikistan and other regions of the world which people use Jalali calendar. 
+### GET /date/parse/:current 
+This will convert given date and time to the current date and time of the server. For example :
+```
+GET /date/parse/10:25 +0430
+```
+And if server is located in Iran, it'll return:
+```
+10/14/2016, 9:25:00, Zone: IRST
+```
+
+
