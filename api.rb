@@ -16,4 +16,8 @@ end
 
 get '/date/jalali' do
  "#{Parsi::Date.today().day()} / #{Parsi::Date.today().month()} / #{Parsi::Date.today().year()}"
+end 
+
+get '/date/parse/:current' do
+ "#{Time.parse(params[:current]).month()} / #{Time.parse(params[:current]).day()} / #{Time.parse(params[:current]).year()} , #{Time.parse(params[:current]).hour} : #{Time.parse(params[:current]).min()} : #{Time.parse(params[:current]).sec()} , Zone : #{Time.parse(params[:current]).zone()}"
 end
