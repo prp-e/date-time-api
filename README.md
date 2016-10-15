@@ -88,6 +88,13 @@ GET /zone/Asia-Tehran
 
 You need to convert zones using this table:
 
-|UNIX Format|API Format|
-|-----------|---------:|
-|||
+|UNIX Format   |API Format     |
+|--------------|--------------:|
+|Asia/Tehran   |Asia-Tehran    |
+
+For more zones, you need to do this :
+
+```bash
+ls /usr/share/zoneinfo
+```
+on your server. 
