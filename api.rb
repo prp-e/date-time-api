@@ -29,3 +29,8 @@ end
 get '/date/to/gregorian/:current' do
  "#{Parsi::Date.parse(params[:current]).to_gregorian.month} / #{Parsi::Date.parse(params[:current]).to_gregorian.day } / #{Parsi::Date.parse(params[:current]).to_gregorian.year}"
 end
+
+get '/zone/:zone' do
+ ENV['TZ'] = params[:zone].sub('-', '/')
+ "#{Time.now.hour} : #{Time.now.min} : #{Time.now.sec}, Zone : #{Time.now.zone}"
+end
