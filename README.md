@@ -80,4 +80,14 @@ Will return :
 ```
 05/29/2016
 ```
+### GET /zone/:zone
+It takes a timezone, and returns current time of that :
+```
+GET /zone/Asia-Tehran
+```
 
+You need to convert zones using this table:
+
+|UNIX Format|API Format|
+|-----------|---------:|
+|||
