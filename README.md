@@ -60,5 +60,24 @@ And if server is located in Iran, it'll return:
 ```
 10/14/2016, 9:25:00, Zone: IRST
 ```
+### GET /date/to/jalali/:current
+It takes a gregorian date and converts it to Jalali. for examlpe :
+```
+GET /date/to/jalali/2016-05-29
+```
+Will return :
+```
+9/3/1395
+```
 
+### GET /date/to/gregorian/:current
+It takes a Jalali date and converts it to Gregorian. for example :
+```
+GET /date/to/gregorian/1395-03-09
+```
+Will return :
+
+```
+05/29/2016
+```
 
